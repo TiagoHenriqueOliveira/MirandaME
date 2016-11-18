@@ -5,6 +5,7 @@
 	<title>Principal</title>
 </head>
 <body>
-	<a href="app/index.php?route=connection">Conexão com o Banco de Dados</a>
+	<p><a href="app/index.php?route=connection">Conexão com o Banco de Dados</a></p>
+	<p><a href="app/index.php?route=Local">Local</a></p>
 </body>
 </html>
