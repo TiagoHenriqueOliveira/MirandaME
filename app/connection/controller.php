@@ -8,6 +8,7 @@ function getConnection() {
 if (mysqli_connect_errno(getConnection())) {
 	$resultado = "Algum erro ocorreu com a conexão do servidor de 
 			banco de dados, erro reportado: " . mysqli_connect_error ();
+	exit();
 } else {
 	$resultado = "Conexão bem sucedida!";
 }
