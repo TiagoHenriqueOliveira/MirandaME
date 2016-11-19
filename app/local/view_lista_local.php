@@ -23,7 +23,6 @@
 					<td><?=$local['id']?></td>
 					<td><?=$local['nome']?></td>
 					<td><?=$local['idade']?></td>
-					<td><a href="index.php?route=local&action=alterar&codigo=<?=$local['id']?>">Alterar</a></td>
 				</tr>
 			<?php } ?>
 		</table>

@@ -19,7 +19,7 @@ switch($acao) {
 		
 	default:
 		$titulo = "Lista de Locais";
-		$locais = @listarTodos($connection);
+		$locais = listarTodos($connection);
 		require 'view_lista_local.php';
 		break;
 }
