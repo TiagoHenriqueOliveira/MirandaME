@@ -2,6 +2,7 @@
 require_once 'model_local.php';
 
 function cadastraLocal($connection) {
+	$titulo = "Cadastro de Locais";
 	if (isset($_POST['frmCadLocal'])) {
 		$id = $_POST['txtId'];
 		$nome = $_POST['txtNome'];
@@ -21,6 +22,7 @@ function cadastraLocal($connection) {
 }
 
 function alteraLocal($connection) {
+	$titulo = "Alteração de Locais";
 	if (isset($_POST['txtId'])) {
 		$id = $_POST['txtId'];
 		$nome = $_POST['txtNome'];
@@ -48,6 +50,7 @@ function alteraLocal($connection) {
 }
 
 function mostraTodos($connection) {
+	$titulo = "Lista de Locais";
 	$query = pesquisaTodos($connection);
 	$dados = array();
 	
