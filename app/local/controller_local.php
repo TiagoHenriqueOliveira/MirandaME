@@ -13,17 +13,14 @@ if(isset($_GET['action'])) {
 
 switch($acao) {
 	case "cadastrar" :
-		$titulo = "Cadastro de Locais";
 		cadastraLocal($connection);
 		break;
 		
 	case "alterar" :
-		$titulo = "Alteração de Locais";
 		alteraLocal($connection);
 		break;
 		
 	default:
-		$titulo = "Lista de Locais";
 		$locais = mostraTodos($connection);
 		require 'view_lista_local.php';
 		break;
