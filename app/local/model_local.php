@@ -1,9 +1,5 @@
 <?php
 
-require_once 'db_connection.php';
-
-$connection = getConnection();
-
 function salvar($connection, $id, $nome, $responsavel) {
 	
 	if ($id == null || $id == "") {
