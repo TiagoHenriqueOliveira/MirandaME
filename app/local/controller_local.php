@@ -3,7 +3,7 @@
 require_once 'db_connection.php';
 require_once 'functions_local.php';
 
-$connection = getConnection();
+$connection = @mysqli_connect ( $db_host, $db_user, $db_pass, $db_name );
 
 if(isset($_GET['action'])) {
 	$acao = $_GET['action'];
@@ -17,9 +17,14 @@ switch($acao) {
 		cadastraLocal($connection);
 		break;
 		
+	case "alterar" :
+		$titulo = "Alteração de Locais";
+		alteraLocal($connection);
+		break;
+		
 	default:
 		$titulo = "Lista de Locais";
-		$locais = listarTodos($connection);
+		$locais = mostraTodos($connection);
 		require 'view_lista_local.php';
 		break;
 }
