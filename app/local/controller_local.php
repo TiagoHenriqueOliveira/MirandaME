@@ -1,6 +1,6 @@
 <?php
 
-require_once 'connection/controller.php';
+require_once 'db_connection.php';
 require_once 'functions_local.php';
 
 $connection = getConnection();
