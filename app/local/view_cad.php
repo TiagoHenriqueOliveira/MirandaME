@@ -34,7 +34,7 @@ include '../header.php';
 							</div>
 							<div class="form-group col-xs-12">
 								<button class="btn btn-success" type="submit">Salvar</button>
-								<button class="btn btn-warning" type="button">Cancelar</button>
+								<button class="btn btn-warning" type="reset">Cancelar</button>
 							</div>
 						</form>
 					</div>
