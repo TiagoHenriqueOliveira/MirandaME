@@ -22,6 +22,6 @@ switch($acao) {
 		
 	default:
 		$locais = mostraTodos($connection);
-		require 'view_lista_local.php';
+		require 'view_lista.php';
 		break;
 }
