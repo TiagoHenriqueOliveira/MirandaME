@@ -1,6 +1,6 @@
 <?php
 
-require_once 'controller_local.php';
+require_once 'controller.php';
 
 ?>
 

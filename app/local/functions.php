@@ -1,5 +1,5 @@
 <?php
-require_once 'model_local.php';
+require_once 'model.php';
 
 function cadastraLocal($connection) {
 	$titulo = "Cadastro de Locais";
