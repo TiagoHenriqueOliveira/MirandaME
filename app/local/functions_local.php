@@ -11,13 +11,13 @@ function cadastraLocal($connection) {
 		if (salvar($connection, $id, $nome, $responsavel)) {
 			$return = "Local cadastrado com sucesso!";
 			$locais = mostraTodos($connection);
-			require 'view_lista_local.php';
+			require 'view_lista.php';
 		} else {
 			$erro = "Houve algum problema com o cadastro, verifique as informações e tente novamente!";
-			require 'view_cad_local.php';
+			require 'view_cad.php';
 		}
 	} else {
-		require 'view_cad_local.php';
+		require 'view_cad.php';
 	}
 }
 
@@ -31,7 +31,7 @@ function alteraLocal($connection) {
 		if (salvar($connection, $id, $nome, $responsavel)) {
 			$return = "Local alterado com sucesso!";
 			$locais = mostraTodos($connection);
-			require 'view_lista_local.php';
+			require 'view_lista.php';
 		} else {
 			$erro = "Houve algum problema com a alteração do cadastro, verifique as informações e tente novamente!";
 		}
@@ -46,7 +46,7 @@ function alteraLocal($connection) {
 	$query = pesquisaId($connection, $id);
 	$result = mysqli_fetch_row($query);
 	$dados = array("id"=>$result[0], "nome"=>utf8_decode($result[1]), "responsavel"=>utf8_decode($result[2]));
-	require 'view_cad_local.php';
+	require 'view_cad.php';
 }
 
 function mostraTodos($connection) {
