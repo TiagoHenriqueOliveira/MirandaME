@@ -65,10 +65,10 @@
 								<a href="#"><i class="fa fa-users fa-fw"></i> Funcionários <span class="fa arrow"></span></a>
 								<ul class="nav nav-second-level">
 									<li>
-										<a href="#"><i class="fa fa-check fa-fw"></i> Cadastrar </a>
+										<a href="app/index.php?route=funcionario&action=register"><i class="fa fa-check fa-fw"></i> Cadastrar </a>
 									</li>
 									<li>
-										<a href="#"><i class="fa fa-search fa-fw"></i> Pesquisar </a>
+										<a href="app/index.php?route=funcionario"><i class="fa fa-search fa-fw"></i> Pesquisar </a>
 									</li>
 								</ul>
 							</li>
