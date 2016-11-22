@@ -9,7 +9,7 @@ function save($connection, $id, $nome, $data_nascimento, $endereco, $naturalidad
 		$sql = "UPDATE funcionario f ". 
 					 "SET f.nome = '$nome', f.data_nascimento = '$data_nascimento', ". 
 						  "f.endereco = '$endereco', f.naturalidade = '$naturalidade', f.telefone = '$telefone' ".
-					"WHERE l.id = '$id'";
+					"WHERE f.id = '$id'";
 		$result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
 	}
 	return $result;
