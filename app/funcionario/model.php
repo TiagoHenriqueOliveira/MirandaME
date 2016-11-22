@@ -15,7 +15,7 @@ function save($connection, $id, $nome, $data_nascimento, $endereco, $naturalidad
 	return $result;
 }
 
-function searchAll($connection) {
+function listAll($connection) {
 	$sql = "SELECT f.id, f.nome, f.data_nascimento, f.endereco, f.naturalidade, f.telefone ".
 			  "FROM funcionario f ".
 			  "ORDER BY f.nome";
