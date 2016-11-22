@@ -5,7 +5,7 @@ include '../header.php';
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-xs-12">
-				<h1 class="page-header">Lista de Locais</h1>
+				<h1 class="page-header">Lista de Funcionários</h1>
 				<ol class="breadcrumb">
 					<li><i class="glyphicon glyphicon-home"></i><a href="../principal.php">	Miranda ME</a></li>
 					<li class="active"><i class="fa fa-list-alt fa-fw"></i> Pesquisar Funcionários</li>
