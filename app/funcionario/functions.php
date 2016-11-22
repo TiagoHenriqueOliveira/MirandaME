@@ -67,12 +67,12 @@ function showAll($connection) {
 	
 	while($row = mysqli_fetch_array($query)) {
 		$dados[] = array(
-			"id"=>$result['id'],
-			"nome"=>utf8_decode($result['nome']),
-			"data_nascimento"=>utf8_decode($result['data_nascimento']),
-			"endereco"=>utf8_decode($result['endereco']),
-			"naturalidade"=>utf8_decode($result['naturalidade']),
-			"telefone"=>$result['telefone']
+			"id"=>$row['id'],
+			"nome"=>utf8_decode($row['nome']),
+			"data_nascimento"=>utf8_decode($row['data_nascimento']),
+			"endereco"=>utf8_decode($row['endereco']),
+			"naturalidade"=>utf8_decode($row['naturalidade']),
+			"telefone"=>$row['telefone']
 		);
 	}
 	
