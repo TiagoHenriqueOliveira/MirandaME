@@ -43,10 +43,10 @@
 								<a href="#"><i class="fa fa-institution fa-fw"></i> Bens <span class="fa arrow"></span></a>
 								<ul class="nav nav-second-level">
 									<li>
-										<a href="app/index.php?route=bem&action=register"><i class="fa fa-check fa-fw"></i> Cadastrar </a>
+										<a href="index.php?route=bem&action=register"><i class="fa fa-check fa-fw"></i> Cadastrar </a>
 									</li>
 									<li>
-										<a href="app/index.php?route=bem"><i class="fa fa-search fa-fw"></i> Pesquisar </a>
+										<a href="index.php?route=bem"><i class="fa fa-search fa-fw"></i> Pesquisar </a>
 									</li>
 								</ul>
 							</li>
@@ -54,10 +54,10 @@
 								<a href="#"><i class="fa fa-suitcase fa-fw"></i> Fornecedores <span class="fa arrow"></span></a>
 								<ul class="nav nav-second-level">
 									<li>
-										<a href="app/index.php?route=fornecedor&action=register"><i class="fa fa-check fa-fw"></i> Cadastrar </a>
+										<a href="index.php?route=fornecedor&action=register"><i class="fa fa-check fa-fw"></i> Cadastrar </a>
 									</li>
 									<li>
-										<a href="app/index.php?route=fornecedor"><i class="fa fa-search fa-fw"></i> Pesquisar </a>
+										<a href="index.php?route=fornecedor"><i class="fa fa-search fa-fw"></i> Pesquisar </a>
 									</li>
 								</ul>
 							</li>
@@ -90,10 +90,10 @@
 										<a href="#">Responsabilidade <span class="fa arrow"></span></a>
 										<ul class="nav nav-third-level">
 											<li>
-												<a href="app/index.php?route=termo/responsabilidade&action=register"><i class="fa fa-check fa-fw"></i> Cadastrar </a>
+												<a href="index.php?route=termo/responsabilidade&action=register"><i class="fa fa-check fa-fw"></i> Cadastrar </a>
 											</li>
 											<li>
-												<a href="app/index.php?route=termo/responsabilidade"><i class="fa fa-search fa-fw"></i> Pesquisar </a>
+												<a href="index.php?route=termo/responsabilidade"><i class="fa fa-search fa-fw"></i> Pesquisar </a>
 											</li>
 										</ul>
 									</li>
@@ -101,10 +101,10 @@
 										<a href="#">Transferência <span class="fa arrow"></span></a>
 										<ul class="nav nav-third-level">
 											<li>
-												<a href="app/index.php?route=termo/transferencia&action=register"><i class="fa fa-check fa-fw"></i> Cadastrar </a>
+												<a href="index.php?route=termo/transferencia&action=register"><i class="fa fa-check fa-fw"></i> Cadastrar </a>
 											</li>
 											<li>
-												<a href="app/index.php?route=termo/transferencia#"><i class="fa fa-search fa-fw"></i> Pesquisar </a>
+												<a href="index.php?route=termo/transferencia#"><i class="fa fa-search fa-fw"></i> Pesquisar </a>
 											</li>
 										</ul>
 									</li>
