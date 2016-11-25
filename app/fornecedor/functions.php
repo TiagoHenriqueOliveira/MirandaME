@@ -7,10 +7,10 @@ function registerProvider($connection) {
 		$cnpj = $_POST['txtCNPJ'];
 		$nome_fantasia = $_POST['txtNomeFantasia'];
 		$razao_social = $_POST['txtRazaoSocial'];
-		$inscricao_estadual = $_POST['txtInscricaoEstadual'];
+		$inscricao_estadual = $_POST['txtInscEstadual'];
 		$endereco = $_POST['txtEndereco'];
 		$telefone = $_POST['txtTelefone'];
-		$uf = $_POST['txtUf'];
+		$uf = $_POST['txtUF'];
 		$municipio = $_POST['txtMunicipio'];
 
 		if (save($connection, $cnpj, $nome_fantasia, $razao_social, $inscricao_estadual, $endereco, $telefone, $uf, $municipio)) {
@@ -31,10 +31,10 @@ function alterProvider($connection) {
 		$cnpj = $_POST['txtCNPJ'];
 		$nome_fantasia = $_POST['txtNomeFantasia'];
 		$razao_social = $_POST['txtRazaoSocial'];
-		$inscricao_estadual = $_POST['txtInscricaoEstadual'];
+		$inscricao_estadual = $_POST['txtInscEstadual'];
 		$endereco = $_POST['txtEndereco'];
 		$telefone = $_POST['txtTelefone'];
-		$uf = $_POST['txtUf'];
+		$uf = $_POST['txtUF'];
 		$municipio = $_POST['txtMunicipio'];
 
 		if (save($connection, $cnpj, $nome_fantasia, $razao_social, $inscricao_estadual, $endereco, $telefone, $uf, $municipio)) {
