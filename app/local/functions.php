@@ -10,7 +10,7 @@ function cadastraLocal($connection) {
 		
 		if (salvar($connection, $id, $nome, $responsavel)) {
 			$return = "Local cadastrado com sucesso!";
-			$locais = mostraTodos($connection);
+			$locais = showAll($connection);
 			require 'view_list.php';
 		} else {
 			$erro = "Houve algum problema com o cadastro, verifique as informações e tente novamente!";
@@ -30,7 +30,7 @@ function alteraLocal($connection) {
 		
 		if (salvar($connection, $id, $nome, $responsavel)) {
 			$return = "Local alterado com sucesso!";
-			$locais = mostraTodos($connection);
+			$locais = showAll($connection);
 			require 'view_list.php';
 		} else {
 			$erro = "Houve algum problema com a alteração do cadastro, verifique as informações e tente novamente!";
@@ -49,7 +49,7 @@ function alteraLocal($connection) {
 	require 'view_register.php';
 }
 
-function mostraTodos($connection) {
+function showAll($connection) {
 	$titulo = "Lista de Locais";
 	$query = pesquisaTodos($connection);
 	$dados = array();
