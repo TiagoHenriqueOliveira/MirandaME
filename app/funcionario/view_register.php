@@ -10,7 +10,7 @@ include '../header.php';
 					<ol class="breadcrumb">
 						<li><i class="glyphicon glyphicon-home"></i><a
 							href="../principal.php"> Miranda ME</a></li>
-						<li class="active"><i class="fa fa-map-marker fa-fw"></i>
+						<li class="active"><i class="fa fa-users fa-fw"></i>
 							Cadastrar Funcionário</li>
 					</ol>
 				</div>
