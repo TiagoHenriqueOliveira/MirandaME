@@ -8,7 +8,8 @@ include '../header.php';
 				<h1 class="page-header">Lista de Fornecedores</h1>
 				<ol class="breadcrumb">
 					<li><i class="glyphicon glyphicon-home"></i><a href="../principal.php">	Miranda ME</a></li>
-					<li class="active"><i class="fa fa-list-alt fa-fw"></i> Pesquisar Fornecedor</li>
+					<li class="active"><i class="fa fa-suitcase fa-fw"></i> Fornecedores</li>
+					<li class="active"><i class="fa fa-list-alt fa-fw"></i> Pesquisar </li>
 				</ol>
 			</div>
 		</div>

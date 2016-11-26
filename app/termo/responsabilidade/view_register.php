@@ -9,7 +9,8 @@ include '../header.php';
 				<ol class="breadcrumb">
 					<li><i class="glyphicon glyphicon-home"></i><a href="../principal.php"> Miranda ME</a></li>
 					<li class="active"><i class="fa fa-file-text fa-fw"></i> Termos </li>
-					<li class="active"><i class="fa fa-check fa-fw"></i> Cadastrar Termos de Responsabilidade</li>
+					<li class="active"><i class="fa fa-book fa-fw"></i> Termo de Responsabilidade</li>
+					<li class="active"><i class="fa fa-check fa-fw"></i> Cadastro</li>
 				</ol>
 			</div>
 		</div>

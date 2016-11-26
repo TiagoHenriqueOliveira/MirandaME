@@ -9,7 +9,8 @@ include '../header.php';
 				<ol class="breadcrumb">
 					<li><i class="glyphicon glyphicon-home"></i><a href="../principal.php"> Miranda ME</a></li>
 					<li class="active"><i class="fa fa-file-text fa-fw"></i> Termos</li>
-					<li class="active"><i class="fa fa-list-alt fa-fw"></i> Pesquisar Termos de Transferência</li>
+					<li class="active"><i class="fa fa-book fa-fw"></i> Termo de Transferência</li>
+					<li class="active"><i class="fa fa-list-alt fa-fw"></i> Pesquisar</li>
 				</ol>
 			</div>
 		</div>
@@ -31,7 +32,7 @@ include '../header.php';
 							<td><?=$termo_transferencia['responsavel_anterior']?></td>
 							<td><?=$termo_transferencia['responsavel_proximo']?></td>
 							<td><?=$termo_transferencia['data']?></td>
-							<td><a href="index.php?route=termo/responsabilidade&action=alter&codigo=<?=$termo_transferencia['id']?>" class="btn btn-primary">Alterar</a></td>
+							<td><a href="index.php?route=termo/transferencia&action=alter&codigo=<?=$termo_transferencia['id']?>" class="btn btn-primary">Alterar</a></td>
 						</tr>
 						<?php } ?>
 					</tbody>

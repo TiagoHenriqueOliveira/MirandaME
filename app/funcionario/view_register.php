@@ -8,10 +8,9 @@ include '../header.php';
 				<div class="col-xs-12">
 					<h1 class="page-header">Cadastro de Funcionários</h1>
 					<ol class="breadcrumb">
-						<li><i class="glyphicon glyphicon-home"></i><a
-							href="../principal.php"> Miranda ME</a></li>
-						<li class="active"><i class="fa fa-users fa-fw"></i>
-							Cadastrar Funcionário</li>
+						<li><i class="glyphicon glyphicon-home"></i><a href="../principal.php"> Miranda ME</a></li>
+						<li class="active"><i class="fa fa-users fa-fw"></i>	Funcionários</li>
+						<li class="active"><i class="fa fa-check fa-fw"></i>	Cadastro</li>
 					</ol>
 				</div>
 			</div>

@@ -9,7 +9,8 @@ include '../header.php';
 				<ol class="breadcrumb">
 					<li><i class="glyphicon glyphicon-home"></i><a href="../principal.php"> Miranda ME</a></li>
 					<li class="active"><i class="fa fa-file-text fa-fw"></i> Termos </li>
-					<li class="active"><i class="fa fa-check fa-fw"></i> Cadastrar Termos de Transferência</li>
+					<li class="active"><i class="fa fa-book fa-fw"></i> Termo de Transferência</li>
+					<li class="active"><i class="fa fa-check fa-fw"></i> Cadastro</li>
 				</ol>
 			</div>
 		</div>
@@ -30,7 +31,7 @@ include '../header.php';
 							</div>
 							<div	class="form-group col-xs-12">
 								<label for="nomeResponsavelAtual">Nome do Responsável Atual:</label>
-								<input class="form-control" type="text" id="nomeResponsavelAtual" name="txtResponsavelProximo" value="<?=@$dados['responsavelAtual']?>" maxlength="255" required />
+								<input class="form-control" type="text" id="nomeResponsavelAtual" name="txtResponsavelProximo" value="<?=@$dados['responsavel_proximo']?>" maxlength="255" required />
 							</div>
 							<div	class="form-group col-xs-8 col-sm-6 col-md-4 col-lg-3">
 								<label for="data">Data:</label>

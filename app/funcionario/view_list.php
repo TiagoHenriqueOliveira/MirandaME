@@ -8,7 +8,8 @@ include '../header.php';
 				<h1 class="page-header">Lista de Funcionários</h1>
 				<ol class="breadcrumb">
 					<li><i class="glyphicon glyphicon-home"></i><a href="../principal.php">	Miranda ME</a></li>
-					<li class="active"><i class="fa fa-list-alt fa-fw"></i> Pesquisar Funcionários</li>
+					<li class="active"><i class="fa fa-users fa-fw"></i> Funcionários</li>
+					<li class="active"><i class="fa fa-list-alt fa-fw"></i> Pesquisar</li>
 				</ol>
 			</div>
 		</div>

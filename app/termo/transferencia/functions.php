@@ -46,7 +46,7 @@ function alterTermTransfer($connection) {
 	
 	$query = searchId($connection, $id);
 	$result = mysqli_fetch_row($query);
-	$dados = array("id"=>$result[0], "data"=>$result[1], "responsavel_proximo"=>utf8_decode($result[2]), "responsavel"=>utf8_decode($result[3]));
+	$dados = array("id"=>$result[0], "data"=>$result[1], "responsavel_proximo"=>utf8_decode($result[2]), "responsavel_anterior"=>utf8_decode($result[3]));
 	require 'view_register.php';
 }
 

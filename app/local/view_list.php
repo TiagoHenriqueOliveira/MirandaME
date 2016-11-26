@@ -7,10 +7,9 @@ include '../header.php';
 			<div class="col-xs-12">
 				<h1 class="page-header">Lista de Locais</h1>
 				<ol class="breadcrumb">
-					<li><i class="glyphicon glyphicon-home"></i><a href="../principal.php">
-							Miranda ME</a></li>
-					<li class="active"><i class="fa fa-list-alt fa-fw"></i> Pesquisar
-						Locais</li>
+					<li><i class="glyphicon glyphicon-home"></i><a href="../principal.php">	Miranda ME</a></li>
+					<li class="active"><i class="fa fa-map-marker fa-fw"></i> Locais</li>
+					<li class="active"><i class="fa fa-list-alt fa-fw"></i> Pesquisar</li>
 				</ol>
 			</div>
 		</div>
