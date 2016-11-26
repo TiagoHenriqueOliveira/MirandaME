@@ -45,7 +45,7 @@ function alteraLocal($connection) {
 	
 	$query = pesquisaId($connection, $id);
 	$result = mysqli_fetch_row($query);
-	$dados = array("id"=>$result[0], "nome"=>utf8_encode($result[1]), "responsavel"=>utf8_encode($result[2]));
+	$dados = array("id"=>$result[0], "nome"=>$result[1], "responsavel"=>$result[2]);
 	require 'view_register.php';
 }
 
@@ -55,7 +55,7 @@ function showAll($connection) {
 	$dados = array();
 	
 	while($row = mysqli_fetch_array($query)) {
-		$dados[] = array("id"=>$row['id'], "nome"=>utf8_encode($row['nome']), "responsavel"=>utf8_encode($row['responsavel']));
+		$dados[] = array("id"=>$row['id'], "nome"=>$row['nome'], "responsavel"=>$row['responsavel']);
 	}
 	
 	return $dados;
