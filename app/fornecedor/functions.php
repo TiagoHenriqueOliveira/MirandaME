@@ -55,13 +55,13 @@ function alterProvider($connection) {
 	$result = mysqli_fetch_row($query);
 	$dados = array(
 		"cnpj"=>$result[0], 
-		"nome_fantasia"=>utf8_decode($result[1]), 
-		"razao_social"=>utf8_decode($result[2]),
+		"nome_fantasia"=>utf8_encode($result[1]), 
+		"razao_social"=>utf8_encode($result[2]),
 		"inscricao_estadual"=>$result[3],
-		"endereco"=>utf8_decode($result[4]),
+		"endereco"=>utf8_encode($result[4]),
 		"telefone"=>$result[5],
-		"uf"=>utf8_decode($result[6]),
-		"municipio"=>utf8_decode($result[7])
+		"uf"=>utf8_encode($result[6]),
+		"municipio"=>utf8_encode($result[7])
 	);
 	require 'view_register.php';
 }
@@ -74,13 +74,13 @@ function showAll($connection) {
 	while($row = mysqli_fetch_array($query)) {
 		$dados[] = array(
 			"cnpj"=>$row['cnpj'], 
-			"nome_fantasia"=>utf8_decode($row['nome_fantasia']), 
-			"razao_social"=>utf8_decode($row['razao_social']),
+			"nome_fantasia"=>utf8_encode($row['nome_fantasia']), 
+			"razao_social"=>utf8_encode($row['razao_social']),
 			"inscricao_estadual"=>$row['inscricao_estadual'],
-			"endereco"=>utf8_decode($row['endereco']),
+			"endereco"=>utf8_encode($row['endereco']),
 			"telefone"=>$row['telefone'],
-			"uf"=>utf8_decode($row['uf']),
-			"municipio"=>utf8_decode($row['municipio'])
+			"uf"=>utf8_encode($row['uf']),
+			"municipio"=>utf8_encode($row['municipio'])
 		);
 	}
 	

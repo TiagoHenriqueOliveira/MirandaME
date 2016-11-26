@@ -46,7 +46,7 @@ function alterTermTransfer($connection) {
 	
 	$query = searchId($connection, $id);
 	$result = mysqli_fetch_row($query);
-	$dados = array("id"=>$result[0], "data"=>$result[1], "responsavel_proximo"=>utf8_decode($result[2]), "responsavel_anterior"=>utf8_decode($result[3]));
+	$dados = array("id"=>$result[0], "data"=>$result[1], "responsavel_proximo"=>utf8_encode($result[2]), "responsavel_anterior"=>utf8_encode($result[3]));
 	require 'view_register.php';
 }
 
@@ -56,7 +56,7 @@ function showAll($connection) {
 	$dados = array();
 	
 	while($row = mysqli_fetch_array($query)) {
-		$dados[] = array("id"=>$row['id'], "data"=>$row['data'], "responsavel_proximo"=>utf8_encode($row['responsavel_proximo']), "responsavel_anterior"=>utf8_decode($row['responsavel']));
+		$dados[] = array("id"=>$row['id'], "data"=>$row['data'], "responsavel_proximo"=>utf8_encode($row['responsavel_proximo']), "responsavel_anterior"=>utf8_encode($row['responsavel']));
 	}
 	
 	return $dados;

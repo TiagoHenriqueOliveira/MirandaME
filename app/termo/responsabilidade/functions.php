@@ -43,7 +43,7 @@ function alterTermResponsibility($connection) {
 	
 	$query = searchId($connection, $id);
 	$result = mysqli_fetch_row($query);
-	$dados = array("id"=>$result[0], "data"=>$result[1], "responsavel"=>utf8_decode($result[2]));
+	$dados = array("id"=>$result[0], "data"=>$result[1], "responsavel"=>utf8_encode($result[2]));
 	require 'view_register.php';
 }
 

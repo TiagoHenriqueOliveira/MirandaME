@@ -51,10 +51,10 @@ function alterFunctionary($connection) {
 	$result = mysqli_fetch_row($query);
 	$dados = array(
 		"id"=>$result[0], 
-		"nome"=>utf8_decode($result[1]), 
-		"data_nascimento"=>utf8_decode($result[2]),
-		"endereco"=>utf8_decode($result[3]),
-		"naturalidade"=>utf8_decode($result[4]),
+		"nome"=>utf8_encode($result[1]), 
+		"data_nascimento"=>$result[2],
+		"endereco"=>utf8_encode($result[3]),
+		"naturalidade"=>utf8_encode($result[4]),
 		"telefone"=>$result[5]
 	);
 	require 'view_register.php';
@@ -68,10 +68,10 @@ function showAll($connection) {
 	while($row = mysqli_fetch_array($query)) {
 		$dados[] = array(
 			"id"=>$row['id'],
-			"nome"=>utf8_decode($row['nome']),
-			"data_nascimento"=>utf8_decode($row['data_nascimento']),
-			"endereco"=>utf8_decode($row['endereco']),
-			"naturalidade"=>utf8_decode($row['naturalidade']),
+			"nome"=>utf8_encode($row['nome']),
+			"data_nascimento"=>$row['data_nascimento'],
+			"endereco"=>utf8_encode($row['endereco']),
+			"naturalidade"=>utf8_encode($row['naturalidade']),
 			"telefone"=>$row['telefone']
 		);
 	}
