@@ -14,7 +14,7 @@ function salvar($connection, $id, $data, $responsavel) {
 	return $result;
 }
 
-function listAll($connection) {
+function listAllTermResponsibility($connection) {
 	$sql = "SELECT tr.id, tr.data, tr.responsavel ".
 			  "FROM termo_responsabilidade tr ".
 			  "ORDER BY tr.responsavel";

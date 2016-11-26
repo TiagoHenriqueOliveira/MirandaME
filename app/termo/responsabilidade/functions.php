@@ -49,7 +49,7 @@ function alterTermResponsibility($connection) {
 
 function showAll($connection) {
 	$titulo = "Lista dos Termos de Responsabilidade";
-	$query = listAll($connection);
+	$query = listAllTermResponsibility($connection);
 	$dados = array();
 	
 	while($row = mysqli_fetch_array($query)) {
