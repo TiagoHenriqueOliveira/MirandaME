@@ -25,7 +25,7 @@ include '../header.php';
 								<label for="nomeResponsavelAnterior">Nome do Responsável Anterior:</label>
 								<select class="form-control" name="txtIdResponsavelAnterior" id="nomeResponsavelAnterior">
 								<?php foreach($responsaveis_anteriores as $responsavel_anterior) { ?>
-									<option value="<?=$responsavel_anterior['idTermoAnterior']?>"><?=$responsavel_anterior['responsavel_anterior']?></option>
+									<option value="<?=$responsavel_anterior['id_responsavel_anterior']?>"><?=$responsavel_anterior['responsavel']?></option>
 								<?php } ?>
 								</select>
 							</div>

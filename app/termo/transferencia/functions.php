@@ -1,6 +1,5 @@
 <?php
 require_once 'model.php';
-// require_once 'responsabilidade/model.php';
 
 function registerTermTransfer($connection) {
 	$titulo = "Cadastro dos Termos de Transferência";
@@ -63,11 +62,11 @@ function showAll($connection) {
 }
 
 function showLastResponsable($connection) {
-	$query = listAllTermResponsibility($connection);
+	$query = listAll($connection);
 	$dados = array();
 	
 	while($row = mysqli_fetch_array($query)) {
-		$dados[] = array("id"=>$row['id'], "responsavel"=>$row['responsavel']);
+		$dados[] = array("id_responsavel_anterior"=>$row['id_responsavel_anterior'], "responsavel"=>$row['responsavel']);
 	}
 	
 	return $dados;
