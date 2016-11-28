@@ -8,7 +8,7 @@ function salvar($connection, $id, $data, $responsavel_proximo, $id_responsavel_a
 		$result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
 	} else {
 		$sql = "UPDATE termo_transferencia tt ".
-		          "SET tt.data = '$data', tt.responsavel_proximo = '$responsavel_proximo', tt.responsavel_anterior = '$id_responsavel_anterior' ".
+		          "SET tt.data = '$data', tt.responsavel_proximo = '$responsavel_proximo', tt.id_responsavel_anterior = '$id_responsavel_anterior' ".
 		          "WHERE tt.id = '$id'";
 		$result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
 	}
