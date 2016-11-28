@@ -27,7 +27,7 @@ function listAll($connection) {
 }
 
 function searchId($connection, $id) {
-	$sql = "SELECT tt.id, tt.data, tt.responsavel_proximo, tr.responsavel ".
+	$sql = "SELECT tt.id, tt.data, tt.responsavel_proximo, tt.id_responsavel_anterior, tr.responsavel ".
 			  "FROM termo_transferencia tt ".
 			  "INNER JOIN termo_responsabilidade tr ".
 			  "ON tt.id_responsavel_anterior = tr.id ".
