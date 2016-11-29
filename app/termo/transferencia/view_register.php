@@ -21,7 +21,8 @@ include '../header.php';
 						<form role="form" action="index.php?route=termo/transferencia&action=register" method="post" accept-charset="utf-8">
 							<input type="hidden" name="frmCadTermoTransferencia" />
 							<input type="hidden" name="txtId" value="<?=@$dados['id']?>" />
-							<div class="form-group col-xs-12">
+							<div	class="form-group col-xs-12">
+								<input type="hidden" name="txtIdResponsavelAnterior" value="<?=@$dados['id_responsavel_anterior']?>" />
 								<label for="nomeResponsavelAnterior">Nome do Responsável Anterior:</label>
 								<select class="form-control" name="txtIdResponsavelAnterior" id="nomeResponsavelAnterior">
 								<?php foreach($responsaveis_anteriores as $responsavel_anterior) { ?>
