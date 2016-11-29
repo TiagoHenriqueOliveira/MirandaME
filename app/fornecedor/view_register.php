@@ -21,6 +21,7 @@ include '../header.php';
 						<div class="col-xs-12">
 							<form role="form" action="index.php?route=fornecedor&action=register" method="post" accept-charset="utf-8">
 								<input type="hidden" name="frmCadFornece" />
+								<input type="hidden" name="txtId" />
 								<div class="form-group col-xs-12">
 									<label for="razaoSocial">Razão Social</label>
 									<input class="form-control" type="text" name="txtRazaoSocial" value="" id="razaoSocial" maxlength="255" required/>

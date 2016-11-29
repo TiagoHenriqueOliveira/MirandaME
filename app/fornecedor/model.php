@@ -1,5 +1,5 @@
 <?php
-function save($connection, $cnpj, $nome_fantasia, $razao_social, $inscricao_estadual, $endereco, $telefone, $uf, $municipio) {
+function save($connection, $id, $cnpj, $nome_fantasia, $razao_social, $inscricao_estadual, $endereco, $telefone, $uf, $municipio) {
 	
 	if ($id == null || $id == "") {
 		$sql = "INSERT INTO fornecedor(cnpj, nome_fantasia, razao_social, inscricao_estadual, endereco, telefone, uf, municipio) ". 
@@ -16,7 +16,7 @@ function save($connection, $cnpj, $nome_fantasia, $razao_social, $inscricao_esta
 }
 
 function listAll($connection) {
-	$sql = "SELECT f.cnpj, f.nome_fantasia, f.razao_social, f.inscricao_estadual, f.endereco, f.telefone, uf, municipio ".
+	$sql = "SELECT f.id, f.cnpj, f.nome_fantasia, f.razao_social, f.inscricao_estadual, f.endereco, f.telefone, uf, municipio ".
 			  "FROM fornecedor f ".
 			  "ORDER BY f.nome_fantasia";
 	$result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
@@ -24,8 +24,8 @@ function listAll($connection) {
 	return $result;
 }
 
-function searchCNPJ($connection, $id) {
-	$sql = "SELECT f.cnpj, f.nome_fantasia, f.razao_social, f.inscricao_estadual, f.endereco, f.telefone, uf, municipio ".
+function searchId($connection, $id) {
+	$sql = "SELECT f.id, f.cnpj, f.nome_fantasia, f.razao_social, f.inscricao_estadual, f.endereco, f.telefone, uf, municipio ".
 			  "FROM fornecedor f ".
 			  "WHERE f.id = '$id'";
 	$result = mysqli_query($connection, $sql) or die(mysqli_error($connection));

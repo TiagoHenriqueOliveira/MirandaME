@@ -30,6 +30,7 @@ include '../header.php';
 					</thead>
 					<tbody>
 						<?php foreach($fornecedores as $fornecedor) { ?>
+						<input type="hidden" name="txtId" value="<?=$fornecedor['id']?>" />
 						<tr class="odd gradeX">
 							<td><?=$fornecedor['razao_social']?></td>
 							<td><?=$fornecedor['nome_fantasia']?></td>
@@ -39,7 +40,7 @@ include '../header.php';
 							<td><?=$fornecedor['telefone']?></td>
 							<td><?=$fornecedor['uf']?></td>
 							<td><?=$fornecedor['municipio']?></td>
-							<td><a href="index.php?route=fornecedor&action=alter&codigo=<?=$fornecedor['cnpj']?>" class="btn btn-primary">Alterar</a></td>
+							<td><a href="index.php?route=fornecedor&action=alter&codigo=<?=$fornecedor['id']?>" class="btn btn-primary">Alterar</a></td>
 						</tr>
 						<?php } ?>
 					</tbody>
