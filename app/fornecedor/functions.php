@@ -4,6 +4,7 @@ require_once 'model.php';
 function registerProvider($connection) {
 	$titulo = "Cadastro de Fornecedores";
 	if (isset($_POST['frmCadFornece'])) {
+		$id = $_POST['txtId'];
 		$cnpj = $_POST['txtCNPJ'];
 		$nome_fantasia = $_POST['txtNomeFantasia'];
 		$razao_social = $_POST['txtRazaoSocial'];
@@ -13,7 +14,7 @@ function registerProvider($connection) {
 		$uf = $_POST['txtUF'];
 		$municipio = $_POST['txtMunicipio'];
 
-		if (save($connection, $cnpj, $nome_fantasia, $razao_social, $inscricao_estadual, $endereco, $telefone, $uf, $municipio)) {
+		if (save($connection, $id, $cnpj, $nome_fantasia, $razao_social, $inscricao_estadual, $endereco, $telefone, $uf, $municipio)) {
 			$fornecedores = showAll($connection);
 			require 'view_list.php';
 		} else {
@@ -27,7 +28,8 @@ function registerProvider($connection) {
 
 function alterProvider($connection) {
 	$titulo = "Alteração de Fornecedores";
-	if (isset($_POST['txtCNPJ'])) {
+	if (isset($_POST['txtId'])) {
+		$id = $_POST['txtId'];
 		$cnpj = $_POST['txtCNPJ'];
 		$nome_fantasia = $_POST['txtNomeFantasia'];
 		$razao_social = $_POST['txtRazaoSocial'];
@@ -37,7 +39,7 @@ function alterProvider($connection) {
 		$uf = $_POST['txtUF'];
 		$municipio = $_POST['txtMunicipio'];
 
-		if (save($connection, $cnpj, $nome_fantasia, $razao_social, $inscricao_estadual, $endereco, $telefone, $uf, $municipio)) {
+		if (save($connection, $id, $cnpj, $nome_fantasia, $razao_social, $inscricao_estadual, $endereco, $telefone, $uf, $municipio)) {
 			$fornecedores = showAll($connection);
 			require 'view_list.php';
 		} else {
@@ -45,23 +47,24 @@ function alterProvider($connection) {
 		}
 	}
 
-	if(isset($_POST['txtCNPJ'])) {
-		$cnpj = $_POST['txtCNPJ'];
+	if(isset($_POST['txtId'])) {
+		$cnpj = $_POST['txtId'];
 	} else {
 		$cnpj = $_GET['codigo'];
 	}
 
-	$query = searchId($connection, $cnpj);
+	$query = searchId($connection, $id);
 	$result = mysqli_fetch_row($query);
 	$dados = array(
-		"cnpj"=>$result[0], 
-		"nome_fantasia"=>utf8_decode($result[1]), 
-		"razao_social"=>utf8_decode($result[2]),
-		"inscricao_estadual"=>$result[3],
-		"endereco"=>utf8_decode($result[4]),
-		"telefone"=>$result[5],
-		"uf"=>utf8_decode($result[6]),
-		"municipio"=>utf8_decode($result[7])
+		"id"=>$result[0],
+		"cnpj"=>$result[1], 
+		"nome_fantasia"=>$result[2], 
+		"razao_social"=>$result[3],
+		"inscricao_estadual"=>$result[4],
+		"endereco"=>$result[5],
+		"telefone"=>$result[6],
+		"uf"=>$result[7],
+		"municipio"=>$result[8]
 	);
 	require 'view_register.php';
 }
@@ -73,14 +76,15 @@ function showAll($connection) {
 	
 	while($row = mysqli_fetch_array($query)) {
 		$dados[] = array(
+			"id"=>$row['id'],
 			"cnpj"=>$row['cnpj'], 
-			"nome_fantasia"=>utf8_decode($row['nome_fantasia']), 
-			"razao_social"=>utf8_decode($row['razao_social']),
+			"nome_fantasia"=>$row['nome_fantasia'], 
+			"razao_social"=>$row['razao_social'],
 			"inscricao_estadual"=>$row['inscricao_estadual'],
-			"endereco"=>utf8_decode($row['endereco']),
+			"endereco"=>$row['endereco'],
 			"telefone"=>$row['telefone'],
-			"uf"=>utf8_decode($row['uf']),
-			"municipio"=>utf8_decode($row['municipio'])
+			"uf"=>$row['uf'],
+			"municipio"=>$row['municipio']
 		);
 	}
 	
