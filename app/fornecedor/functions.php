@@ -48,22 +48,23 @@ function alterProvider($connection) {
 	}
 
 	if(isset($_POST['txtId'])) {
-		$cnpj = $_POST['txtId'];
+		$id = $_POST['txtId'];
 	} else {
-		$cnpj = $_GET['codigo'];
+		$id = $_GET['codigo'];
 	}
 
 	$query = searchId($connection, $id);
 	$result = mysqli_fetch_row($query);
 	$dados = array(
-		"cnpj"=>$result[0], 
-		"nome_fantasia"=>$result[1], 
-		"razao_social"=>$result[2],
-		"inscricao_estadual"=>$result[3],
-		"endereco"=>$result[4],
-		"telefone"=>$result[5],
-		"uf"=>$result[6],
-		"municipio"=>$result[7]
+		"id"=>$result[0],
+		"cnpj"=>$result[1], 
+		"nome_fantasia"=>$result[2], 
+		"razao_social"=>$result[3],
+		"inscricao_estadual"=>$result[4],
+		"endereco"=>$result[5],
+		"telefone"=>$result[6],
+		"uf"=>$result[7],
+		"municipio"=>$result[8]
 	);
 	require 'view_register.php';
 }
